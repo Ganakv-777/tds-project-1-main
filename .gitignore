@@ -1,8 +1,17 @@
-.venv/
+# environment
 .env
+
+# virtual env
+.venv/
+venv/
+
+# python cache
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-*.log
+
+# generated code (app builder output)
+app/generated_apps/
+
+# OS files
 .DS_Store
+Thumbs.db
