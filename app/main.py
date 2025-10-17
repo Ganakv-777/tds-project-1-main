@@ -10,6 +10,13 @@ from .github_utils import auth_check as gh_auth_check, create_gist
 
 app = FastAPI(title="AI App Builder", version="2.0.0")
 
+from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # ------------------- Models -------------------
 class TaskIn(BaseModel):
